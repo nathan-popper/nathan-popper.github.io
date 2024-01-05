@@ -24,9 +24,7 @@ return x
 
 <details>
   <summary>
-    This Block Should Collapse
+    Code
   </summary>
-
-<br>
 Text text text
 </details>
