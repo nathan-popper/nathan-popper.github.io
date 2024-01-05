@@ -17,7 +17,7 @@ After data collection and cleaning I was left with 7941 unique songs that had ap
 {::options parse_block_html="true" /}
 
 <details>
-  <summary>
+  <summary markdown="span">
     Text
   </summary>
 
