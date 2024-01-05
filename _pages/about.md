@@ -35,3 +35,5 @@ return x
 </details>
 
 {::options parse_block_html="false" /}
+
+Let's say there's something after. Does it still do that?
