@@ -4,4 +4,14 @@ excerpt: "By mining a diverse range of features, from lyrical metrics and musica
 collection: portfolio
 ---
 
+## Data Collection and Wrangling
+
+Reverse ranking
+
+## Exploratory Data Analysis
+
+After data collection and cleaning I was left with 7941 unique songs that had appeared on the Billboard Hot 100. 
+
+## Results
+
 
