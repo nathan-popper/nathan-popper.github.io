@@ -24,5 +24,6 @@ return x
 
 <details>
   <summary>Collapse</summary>
+  
 Text text text
 </details>
