@@ -1,6 +1,6 @@
 ---
 title: "Popularity Patterns: Data-Driven Analysis of Billboard Chart-Toppers"
-excerpt: "By mining a diverse range of features, from lyrical metrics and musical elements to song genre, I sought to use a machine learning approach to find patterns and trends in popular music.<img src='/images/total_weeks_violin.png' width='500' height='400'>"
+excerpt: "By mining a diverse range of features, from lyrical metrics and musical elements to song genre, I sought to use a machine learning approach to find patterns and trends in popular music.<img src='/images/genre_weeks.png' width='500' height='300'>"
 collection: portfolio
 ---
 
