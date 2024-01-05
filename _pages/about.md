@@ -1,3 +1,4 @@
+{::options parse_block_html="true" /}
 ---
 permalink: /
 title: "Welcome!"
