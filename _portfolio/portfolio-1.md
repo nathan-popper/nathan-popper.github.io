@@ -14,11 +14,15 @@ After data collection and cleaning I was left with 7941 unique songs that had ap
 
 ## Results
 
+{::options parse_block_html="true" /}
+
 <details>
   <summary>
     Text
   </summary>
 
-  HI
+  ```python
+    def func()
+  ```
   
 </details>
