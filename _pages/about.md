@@ -23,5 +23,6 @@ return x
 ```
 
 <details><summary>Click this!</summary>
+  
 Here is some more text that was hidden before.
 </details>
