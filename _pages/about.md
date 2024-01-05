@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "Welcome!"
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my site! I'm Nathan, a graduate student currently in my second semester of an analytics and data science degree. 
+I'm Nathan, a graduate student currently in my second semester of an analytics and data science degree. 
 
 ### Most Recent Project:
 
