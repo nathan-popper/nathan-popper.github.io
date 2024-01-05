@@ -21,9 +21,9 @@ After data collection and cleaning I was left with 7941 unique songs that had ap
     Text
   </summary>
 
-  ```python
-    def func()
-  ```
+```python
+  def func()
+```
   
 </details>
 
