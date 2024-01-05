@@ -23,6 +23,6 @@ return x
 ```
 
 <details>
-  <summary>Code</summary>
+  <summary>Collapse</summary>
 Text text text
 </details>
