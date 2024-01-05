@@ -22,3 +22,11 @@ x = 2
 return x
 ```
 
+<details>
+  <summary>
+    This Block Should Collapse
+  </summary>
+
+<br>
+Text text text
+</details>
