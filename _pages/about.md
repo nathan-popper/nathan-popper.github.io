@@ -43,6 +43,5 @@ return x
   ```
   Of course, it has to be Hello World, right?
 </details>
-<br/>
 
 {::options parse_block_html="false" /}
