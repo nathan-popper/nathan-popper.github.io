@@ -1,6 +1,6 @@
 ---
 title: "Popularity Patterns: Data-Driven Analysis of Billboard Chart-Toppers"
-excerpt: "By mining a diverse range of features, from lyrical metrics and musical elements to song genre, I sought to use a machine learning approach to find patterns and trends in popular music.<img src='/images/genre_weeks.png' width='500' height='300'>"
+excerpt: "By mining a diverse range of features, I sought to use a machine learning approach to uncover patterns and similarities in current popular music.<img src='/images/genre_weeks.png' width='500' height='300'>"
 collection: portfolio
 ---
 
@@ -9,11 +9,9 @@ collection: portfolio
 
 ## Data Collection and Wrangling
 
-Reverse ranking
 
 ## Exploratory Data Analysis
 
-After data collection and cleaning I was left with 7941 unique songs that had appeared on the Billboard Hot 100. 
 
 ## Results
 
@@ -21,7 +19,7 @@ After data collection and cleaning I was left with 7941 unique songs that had ap
 
 <details>
   <summary markdown="span">
-    Text
+    Code Example
   </summary>
 
 ```python
