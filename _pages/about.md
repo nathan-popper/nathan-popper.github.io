@@ -12,4 +12,4 @@ I'm Nathan, a graduate student currently in my second semester of an analytics a
 
 ### Most Recent Project:
 
-Popularity Patterns: Data-Driven Analysis of Billboard Chart-Toppers
+[Popularity Patterns: Data-Driven Analysis of Billboard Chart-Toppers](https://nathan-popper.github.io/portfolio/portfolio-1/)
