@@ -17,7 +17,7 @@ Train a text classifier to mimic the output of a zero-shot classification from a
 ## Data Overview
 Best Buy presented us with over 350k custermer interactions that had been transcribed and given class labels with a GPT 3.5 zero-shot model. Overall, the transcriptions were messy and contained a substantial number of typos and formatting issues. Another potential issue was the class imbalance - 5 largest categories accounted for over 42% of the customer interactions
 
-![Label Distribution](https://nathan-popper.github.io/images/label_distribution_10.png)
+![Label Distribution](images/label_distribution10.png)
 
 With these challenges in mind, we started working on implementing our NLP Pipeline. 
 
