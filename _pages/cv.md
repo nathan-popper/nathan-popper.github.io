@@ -31,7 +31,7 @@ Work experience
 **GRADUATE TEACHING ASSISTANT** (2024 – Present)
 * Lead office hours and created solution sets for “Computing for Data Analysis”, a Python based data analysis and machine learning course
 
-#### DALLAS COUNTY HEALTH AND HUMAN SERVICES
+### DALLAS COUNTY HEALTH AND HUMAN SERVICES
 
 **DATA MANAGEMENT** (2021 – 2022)
 - Developed logic functions using R and Excel to identify and revise tens of thousands of duplicate and
@@ -54,10 +54,15 @@ new HIPAA-protected COVID-19 data
 Projects
 ======
 - Text Classification of Customer Service Calls (Best Buy NLP Competition)
+  - Created a full NLP text cleaning & linguistic processing pipeline that fed into a TF-IDF SVM text classifier that could classify the topic of a customer service call and provide insight into customers key problems 
 - Popular Song Insight Extraction
+  - Synthesized a new dataset by scraping song names from Billboard and matching with data from Spotify API. Then used clustering and visualizations to present the common features of the most popular songs 
 - Assessing Efficacy and Perceptions of COVID-19 Case and Contact Invetigations
-  - While working for DCHHS 
+  - Wrote and implemented surveys to collect patient sentiment during interviews 
+  - Wrangled and analyzed data to generate insights and determine improvements in pandemic response strategies for Dallas County Health and Human Services
+
 - Piazza Post Topic Classifier
+  - Implemented a Bernoulli Naïve Bayes Classifier in C++ that used a bag-or-words framework to identify the subject of student forum posts and increase course organization
 
 Please see [portfolio](https://nathan-popper.github.io/portfolio/) for more details
 
