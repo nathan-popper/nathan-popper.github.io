@@ -11,6 +11,8 @@ redirect_from:
 
 ***
 
+[Download Resume](https://nathan-popper.github.io/files/Nathan_Popper_Resume_24.pdf)
+
 Education
 ======
 **Georgia Institute of Technology** (2023 - Present)
