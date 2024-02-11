@@ -31,11 +31,14 @@ Work experience
 
 **DALLAS COUNTY HEALTH AND HUMAN SERVICES**
 DATA MANAGEMENTv2021 – 2022
+
 § Developed logic functions using R and Excel to identify and revise tens of thousands of duplicate and
 incorrect database entries, increasing the accuracy of our daily reporting & Tableau dashboards
+
 § Conducted statistical analyses using R to gather metrics about the COVID-19 pandemic for use by state and
 national government agencies
-COLLEGE ANALYTICS LEADv2020 – 2021
+
+**COLLEGE ANALYTICS LEAD**, 2020 – 2021
 § Calculated statistics to track and analyze COVID-19 prevalence on college campuses in Dallas County to
 reduce outbreak risk
 § Communicated data driven recommendations directly to college administrators who used findings to create
@@ -54,6 +57,17 @@ Skills
   * Sub-skill 2.2
   * Sub-skill 2.3
 * Skill 3
+
+Projects
+======
+- Text Classification of Customer Service Calls (Best Buy NLP Competition)
+- Popular Song Insight Extraction
+- Assessing Efficacy and Perceptions of COVID-19 Case and Contact Invetigations
+  - While working for DCHHS 
+- Piazza Post Topic Classifier
+
+Please see [portfolio](https://nathan-popper.github.io/portfolio/) for more details
+
 
 Publications
 ======
