@@ -1,6 +1,6 @@
 ---
 title: "Customer Service Text Classification"
-excerpt: "Best Buy NLP Competition.<img src='/images/tfidfwordcloud.png' width='500' height='300'>"
+excerpt: "Best Buy NLP Competition<br>.<img src='/images/tfidfwordcloud.png' width='500' height='300'>"
 collection: portfolio
 ---
 
