@@ -23,6 +23,16 @@ The 5 largest categories accounted for over 42% of the customer interactions.
 
 ## NLP Pipeline
 
+## Text Vectorization
+
+## Model Choice
+
+## Results
+
+## Challenges
+- Reduced Vocabulary
+- Resampling
+- Generative Models
 
 {::options parse_block_html="true" /}
 
