@@ -93,7 +93,7 @@ The following wordclouds demonstrate the effectiveness of TF-IDF vectorization f
 
 ![Default Employment Wordcloud](/images/employment_def_wordcloud.png)
 
-After adding inverse document frequency, the most unique words within this label become much more dominant. 
+After adding inverse document frequency, the most unique words within this label become much more dominant. While it's not easy to pick up which label the first wordcloud comes from, there is no doubt that the second word cloud was generated from conversations specifically about getting a new job.
 
 ![TFIDF Employment Wordcloud](/images/employment_tfidf_wordcloud.png)
 
