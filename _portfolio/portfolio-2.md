@@ -1,6 +1,6 @@
 ---
-title: "Customer Service Text Classification"
-excerpt: "Best Buy NLP Competition<br><img src='/images/employment_def_wordcloud.png' width='500' height='300'>"
+title: "Text Classification of Customer Service Calls (Best Buy NLP Competition)"
+excerpt: "<img src='/images/employment_def_wordcloud.png' width='500' height='300'>"
 collection: portfolio
 ---
 
