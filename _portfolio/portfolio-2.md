@@ -101,9 +101,15 @@ After adding inverse document frequency, the most unique words within this label
 ## Results
 
 ## Challenges
+
+![Imbalance-Performance](/images/performance_imbalance.png)
+
+![label_unique_score](/images/label_unique_f1_2.png)
+
 - Reduced Vocabulary
 - Resampling
 - Generative Models
+
 
 {::options parse_block_html="true" /}
 
