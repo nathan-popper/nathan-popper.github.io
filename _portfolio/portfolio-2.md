@@ -5,7 +5,11 @@ collection: portfolio
 ---
 
 ## Project Goal
-Train a text classifier to identify the topic of customer service calls made to Best Buy
+Train a text classifier to identify the topic of customer service calls made to Best Buy.
+
+- project goal
+- strategy
+- results
 
 ### Skills Utilized
 - NLP Pipeline Implementations
