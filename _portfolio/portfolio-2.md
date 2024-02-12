@@ -87,7 +87,7 @@ The classification models used can only work with numbers, and there were a numb
 
 {::options parse_block_html="false" /}
 
-
+<br>
 The following wordclouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. The size of the word represents term frequency within the "employment or career inquiries" label. 
 
 ![Default Employment Wordcloud](/images/employment_def_wordcloud.png)
@@ -98,17 +98,21 @@ After adding inverse document frequency, the most unique words within this label
 
 
 ## Results
+We began by testing the performance between logistic regression, regressioin trees, and linear support vector machines. The performance in SVM was clearly the best so we decided to move forward with that model. Testing the SVM on the uncleaned text, the model was able to achieve an accuracy of around 55%. After implementing our pipeline and using optimal parameters, this accuracy improved to 62%. For comparison, the Best Buy team trained T5-small model for 20 epochs & achieved an F1 of 72%. While their model had superior performance, the difference in model complexity should be considered. One of the main goals of our project was to balance complexity and performance which is why we chose SVM rather than transformers or another neural network architecture. 
 
 ## Challenges
+One of the most challenging components of the project was deciding on how to deal with the class imbalance. When using TF-IDF and in classification in general, imbalanced classes tend to bias the results of the model. The following visualization shows the performance of each label in relation to that labels total size. 
 
-![Imbalance-Performance](/images/performance_imbalance.png)
+![Imbalance-Performance](/images/performance_imbalance12.png)
 
-![label_unique_score](/images/label_unique_f1_2.png)
+The groups with the lowest number of observations did perform the worst overall. We attempted to oversample to minority group, undersample the majority group and even different mixes of both. Unfortunately, our changes improved certain groups while hurting others and the overall performance remained the same. We did also experiment with generative models that would consider the prior distributions of the labels but these performed much worse too. 
 
-- Reduced Vocabulary
-- Resampling
-- Generative Models
+### An Interesting Finding about Performance
+The most interesting discovery came after I spent some time analyzing the vocabulary uniqueness of each label. Using Bayes' theorem I calculated the probability of each label given each word. After running this code I had scores for each word-label combination and could look for the highest value words - words that had high conditional probability. For example, the best word in the entire dataset was "hiring". Over 50% of the time it appeared in the "employment or career inquiries" label while appearing in the entire dataset less than 1% of the time. When the word "hiring" appears there was almost an 80% chance that the conversation could be labeled correctly, and this was without having to account for any other words. I grouped together each label with it's most valuable unique words. Below is a visualization of each label along with a score I calculated to reflect the uniqueness of the label vocabulary.
 
+![label_unique_score](/images/vocab_performance12.png)
+
+Overall, the categories that performed the best were just the ones that had the most unique words to identify the conversations with. If the conversations don't have any words that set it apart from the others it will be hard to classify with even the most complex models. 
 
 {::options parse_block_html="true" /}
 
