@@ -27,16 +27,20 @@ Our pipeline included two main steps:
 2. Linguistic Preprocessing
 
   Keeping punctuation and and other irrelevant noise in the text would affect the performance of the SVM model we wanted to use so data cleaning was a valuable first step. We removed punctuation and symbols that had been used to replace redacted information. Every time the speaker changed in the conversation, the transcription would note this by adding "Agent says:" or "Customer says:". I believed that removing these items would cause minimal information loss while reducing the size of the dataset. 
-  In our linguistic preprocessing stage each conversation would get tokenized, cleaned of stop-words and lemmatized. 
+  In our linguistic preprocessing stage I defined function to tokenize, clean out stop-words and lemmatize each conversation. 
 
 {::options parse_block_html="true" /}
 
 <details>
   <summary markdown="span">
-    Preprocessing Code
+    View Preprocessing Code
   </summary>
 
 ```python
+  from nltk.tokenize import word_tokenize
+  from nltk.stem import WordNetLemmatizer
+  from nltk.corpus import stopwords
+
   lemmatizer = WordNetLemmatizer()
   def apply_lemmatizer(text: str) -> str:
       """Apply lemmatizer to a single text conversation"""
@@ -44,12 +48,7 @@ Our pipeline included two main steps:
       lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]
       return " ".join(lemmatized_tokens)
 
-  # Edit the base stop word list to keep words that are helpful
   stop_words = set(stopwords.words('english'))
-  keep_words = ["have", "not", "below", "few", "down"]
-  for word in keep_words:
-      stop_words.remove(word)
-
   def remove_stopwords(text: str) -> str:
       """Apply stop word removal for a single text conversation"""
       tokens = word_tokenize(text)
@@ -61,9 +60,34 @@ Our pipeline included two main steps:
 
 {::options parse_block_html="false" /}
 
-## Text Vectorization
+## Vectorization & Training
+There were a number of different options for converting the text into numerical vectors that could be fit with a model. Each conversation had largely similar words. Since theses were all calls to Best Buy customer service, the types of phrases and keywords were likely to be similar. In addition, the agents who take the call have very scripted responses which leads conversations to share most of the same words. I didn't want these extremely frequent words to dominate the unique, valuable words. We chose to use TF-IDF vectorization for this reason. 
 
-## Model Choice
+{::options parse_block_html="true" /}
+
+<details>
+  <summary markdown="span">
+    View Vectorization Code
+  </summary>
+
+```python
+  # Set data to train on:  
+  X = df["text"]
+  y = df["label"]
+  
+  # Train-Test Split
+  X_train, X_test, y_train, y_test = train_test_split(X, y, 
+                                                      test_size=0.3, 
+                                                      random_state=42)
+  
+  # TF-IDF vectorizing for training X
+  vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=2, sublinear_tf=True)
+  X_train_vectorized = vectorizer.fit_transform(X_train)
+```
+  
+</details>
+
+{::options parse_block_html="false" /}
 
 ## Results
 
