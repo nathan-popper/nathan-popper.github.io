@@ -89,6 +89,15 @@ There were a number of different options for converting the text into numerical 
 
 {::options parse_block_html="false" /}
 
+The following wordclouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. The size of the word represents term frequency within the "employment or career inquiries" label. 
+
+![Default Employment Wordcloud](/images/employment_def_wordcloud.png)
+
+After adding inverse document frequency, the most unique words within this label become much more dominant. 
+
+![TFIDF Employment Wordcloud](/images/employment_tfidf_wordcloud.png)
+
+
 ## Results
 
 ## Challenges
