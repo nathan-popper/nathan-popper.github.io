@@ -4,12 +4,8 @@ excerpt: "<img src='/images/employment_def_wordcloud.png' width='500' height='30
 collection: portfolio
 ---
 
-## Project Goal
-Train a text classifier to identify the topic of customer service calls made to Best Buy.
-
-- project goal
-- strategy
-- results
+## Executive Summary
+This project was part of a two-week competition hosted by Georgia Tech in partnership with Best Buy. Our objective was to train a text classifier to identify the topic of real customer service calls made to Best Buy. The magnitude of the dataset required efficient use of text cleaning, text preprocessing and vectorization. My teams methodology was to strike a balance between model performance and complexity so we used support vector machines for our final output. Our final model was able to achieve an accuracy of 62% when classifying the 57 different call subjects. 
 
 ### Skills Utilized
 - NLP Pipeline Implementations
@@ -102,7 +98,7 @@ After adding inverse document frequency, the most unique words within this label
 
 
 ## Results
-We began by testing the performance between logistic regression, regressioin trees, and linear support vector machines. The performance in SVM was clearly the best so we decided to move forward with that model. Testing the SVM on the uncleaned text, the model was able to achieve an accuracy of around 55%. After implementing our pipeline and using optimal parameters, this accuracy improved to 62%. For comparison, the Best Buy team trained T5-small model for 20 epochs & achieved an F1 of 72%. While their model had superior performance, the difference in model complexity should be considered. One of the main goals of our project was to balance complexity and performance which is why we chose SVM rather than transformers or another neural network architecture. 
+We began by testing the performance between logistic regression, regressioin trees, and linear support vector machines. The performance in SVM was clearly the best so we decided to move forward with that model. Testing the SVM on the uncleaned text, the model was able to achieve an accuracy of around 55%. After implementing our pipeline and using optimal parameters, this accuracy improved to 62%. For comparison, the Best Buy team trained T5-small model for 20 epochs & achieved an F1 of 72%. While their model had superior performance, the difference in model complexity should be considered. One of the main goals of our project was to balance complexity and performance which is why we chose SVM rather than transformers or another neural network architecture.
 
 ## Challenges
 One of the most challenging components of the project was deciding on how to deal with the class imbalance. When using TF-IDF and in classification in general, imbalanced classes tend to bias the results of the model. The following visualization shows the performance of each label in relation to that labels total size. 
@@ -117,19 +113,4 @@ The most interesting discovery came after I spent some time analyzing the vocabu
 ![label_unique_score](/images/vocab_performance12.png)
 
 Overall, the categories that performed the best were just the ones that had the most unique words to identify the conversations with. If the conversations don't have any words that set it apart from the others it will be hard to classify with even the most complex models. 
-
-{::options parse_block_html="true" /}
-
-<details>
-  <summary markdown="span">
-    Code Example
-  </summary>
-
-```python
-  def func()
-```
-  
-</details>
-
-{::options parse_block_html="false" /}
 
