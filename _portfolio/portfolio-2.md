@@ -88,11 +88,11 @@ The classification models used can only work with numbers, and there were a numb
 {::options parse_block_html="false" /}
 
 <br>
-The following wordclouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. The size of the word represents term frequency within the "employment or career inquiries" label. 
+The following wordclouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. In the first image, the size of the word is calculated from basic term frequency within the "employment or career inquiries" label. This represents normal count vectorization of text.
 
 ![Default Employment Wordcloud](/images/employment_def_wordcloud.png)
 
-After adding inverse document frequency, the most unique words within this label become much more dominant. While it's not easy to pick up which label the first wordcloud comes from, there is no doubt that the second word cloud was generated from conversations specifically about getting a new job.
+The image below was generated from the same conversations but the size of the words now reflect how TF-IDF vectorization would weight them with inverse document frequency. The most unique and valuable words within the label become much more dominant. Using this type of vectorization allows the model to more easily discriminate between the classes. 
 
 ![TFIDF Employment Wordcloud](/images/employment_tfidf_wordcloud.png)
 
