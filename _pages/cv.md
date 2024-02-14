@@ -15,30 +15,36 @@ redirect_from:
 
 Education
 ======
-**Georgia Institute of Technology** (2023 - Present)
+### **Georgia Institute of Technology** (2023 - Present)
   * Master of Science in Analytics
   * George Fellowship Scholar
   * GPA 4.0
-  * Coursework: Computing for Data Analysis, Intro Analytics Modeling, Statistical Methods, Analytics for Business, Machine Learning, Regression Analysis
+  * Coursework:
+      * Computing for Data Analysis
+      * Intro Analytics Modeling
+      * Statistical Methods
+      * Analytics for Business
+      * Machine Learning
+      * Regression Analysis
 
-**University of Texas at Arlington** (2022)
+### **University of Texas at Arlington** (2022)
   * Coursework: Linear Algebra, Calculus II, Calculus III 
 
-**University of Michigan** (2017 - 2021)
+### **University of Michigan** (2017 - 2021)
   * BA Economics
   * LSA Honors Program 
 
 Work experience
 ======
-**GRADUATE TEACHING ASSISTANT** (2024 – Present)
+### **GRADUATE TEACHING ASSISTANT** (2024 – Present)
 * Lead office hours and created solution sets for “Computing for Data Analysis”, a Python based data analysis and machine learning course
 
 ### DALLAS COUNTY HEALTH AND HUMAN SERVICES
 
-**DATA MANAGEMENT** (2021 – 2022)
-- Developed logic functions using R and Excel to identify and revise tens of thousands of duplicate and
+DATA MANAGEMENT (2021 – 2022)
+> Developed logic functions using R and Excel to identify and revise tens of thousands of duplicate and
 incorrect database entries, increasing the accuracy of our daily reporting & Tableau dashboards
-- Conducted statistical analyses using R to gather metrics about the COVID-19 pandemic for use by state and
+> Conducted statistical analyses using R to gather metrics about the COVID-19 pandemic for use by state and
 national government agencies
 
 **COLLEGE ANALYTICS LEAD** (2020 – 2021)
