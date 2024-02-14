@@ -5,17 +5,17 @@ collection: portfolio
 ---
 
 ## Executive Summary
-This project was part of a two-week competition hosted by Georgia Tech in partnership with Best Buy. Our objective was to train a text classifier to identify the topic of real customer service calls made to Best Buy. The magnitude of the dataset required efficient use of text cleaning, text preprocessing and vectorization. My teams methodology was to strike a balance between model performance and complexity so we used support vector machines for our final output. Our final model was able to achieve an accuracy of 62% when classifying the 57 different call subjects. 
+This project was part of a two-week competition hosted by Georgia Tech in partnership with Best Buy. Our objective was to train a text classifier to identify the topic of real customer service calls. The magnitude of the dataset required efficient use of text cleaning, text preprocessing and vectorization. My teams methodology was to strike a balance between performance and complexity and went with a support vector machine for our final model choice. We were able to achieve an accuracy of 62%, a 38+% increase from the dummy classifier baseline.
 
 ### Skills Utilized
 - NLP Pipeline Implementations
-- Text Vectorization
+- Custom Text Vectorization
 - Text Feature Extraction
 - Handling Imbalanced Classes
 - SVM (scikit-learn)
 
 ## Data Overview
-Best Buy presented us with over 350k custermer phone calls that had been transcribed and then given labels with a GPT 3.5 zero-shot model. Right from the start, we noticed some unique aspects of this dataset. The transcriptions were messy and contained a substantial number of typos and formatting issues. Even in different call topics, the words and phrases used in most of the conversations was noticeably similar. These were all calls to Best Buy customer service, so the similarity of the types of phrases and keywords is not surprising. Within each call, there were some very common words. For example, every time the speaker changed in the conversation the transcription would note this by adding "Agent says" or "Customer says". Also, the agents who take the call have very scripted responses which leads to additional similarity between conversations. Another potential issue was the class imbalance - the five largest categories accounted for over 42% of the customer interactions. Each of the 57 labels are charted below with their total count. 
+Best Buy presented us with over 350k custermer phone calls that had been transcribed and then given labels with a GPT 3.5 zero-shot model. The transcriptions were messy and contained a substantial number of typos and formatting issues. While the call topics were different, the words and phrases used in most of the conversations was noticeably similar. These were all calls to Best Buy customer service, so the similarity of the types of phrases and keywords is not surprising. Within each call, there were often reapeated words. For example, every time the speaker changed in the conversation the transcription would note this by adding "Agent says" or "Customer says". Also, the agents who take the call have very scripted responses which leads to additional similarity between conversations. Another potential issue was the class imbalance - the five largest categories accounted for over 42% of the customer interactions. Each of the 57 labels are charted below with their total count. 
 
 ![Label Distribution](/images/label_distribution11.png)
 
