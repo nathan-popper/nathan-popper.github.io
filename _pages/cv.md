@@ -50,7 +50,7 @@ Work experience
 ### **Graduate Teaching Assistant** (2024 – Present)
 * Lead office hours and created solution sets for “Computing for Data Analysis”, a Python based data analysis and machine learning course
 
-## DALLAS COUNTY HEALTH AND HUMAN SERVICES
+### DALLAS COUNTY HEALTH AND HUMAN SERVICES
 
 **Data Management** (2021 – 2022)
 - Developed logic functions using R and Excel to identify and revise tens of thousands of duplicate and
