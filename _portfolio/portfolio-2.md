@@ -5,7 +5,7 @@ collection: portfolio
 ---
 
 ## Executive Summary
-This project was part of a two-week competition hosted by Georgia Tech in partnership with Best Buy. Our objective was to train a text classifier to identify the topic of real customer service calls. The magnitude of the dataset required efficient use of text cleaning, text preprocessing and vectorization. My teams methodology was to strike a balance between performance and complexity and went with a support vector machine for our final model choice. We were able to achieve an accuracy of 62%, a 38+% increase from the dummy classifier baseline.
+This project was part of a two-week competition hosted by Georgia Tech in partnership with Best Buy. Our objective was to train a text classifier to identify the topic of real customer service calls. The magnitude of the dataset required efficient use of text cleaning, text preprocessing and vectorization. My team’s methodology was to strike a balance between performance and complexity and went with a support vector machine for our final model choice. We were able to achieve an accuracy of 62%, a 38+% increase from the dummy classifier baseline.
 
 ### Skills Utilized
 - NLP Pipeline Implementations
@@ -15,7 +15,7 @@ This project was part of a two-week competition hosted by Georgia Tech in partne
 - SVM (scikit-learn)
 
 ## Data Overview
-Best Buy presented us with over 350k custermer phone calls that had been transcribed and then given labels with a GPT 3.5 zero-shot model. The transcriptions were messy and contained a substantial number of typos and formatting issues. Within each conversation, there were many reapeated words and phrases. For example, every time the speaker changed in the conversation the transcription would note this by adding "Agent says" or "Customer says". Also, the agents who take the call have very scripted introductions and responses which leads to additional similarity. The classes were extremely imbalanced - the five largest categories accounted for over 42% of the customer interactions. Each of the 57 labels are charted below with their total count. 
+Best Buy presented us with over 350k customer phone calls that had been transcribed and then given labels with a GPT 3.5 zero-shot model. The transcriptions were messy and contained a substantial number of typos and formatting issues. Within each conversation, there were many repeated words and phrases. For example, every time the speaker changed in the conversation the transcription would note this by adding "Agent says" or "Customer says". Also, the agents who take the call have very scripted introductions and responses which leads to additional similarity. The classes were extremely imbalanced - the five largest categories accounted for over 42% of the customer interactions. Each of the 57 labels are charted below with their total count. 
 
 ![Label Distribution](/images/label_distribution11.png)
 
@@ -24,7 +24,7 @@ Our pipeline included two main steps:
 1. Data cleaning
 2. Linguistic Preprocessing
 
-  Keeping punctuation and and other irrelevant noise in the text would affect the performance of the classification model we wanted to use, so data cleaning was a valuable first step. We removed punctuation and symbols that had been used to replace redacted information. In our linguistic preprocessing stage I defined function to tokenize, clean out stop-words and lemmatize each conversation. We then had clean text ready to be used in the classification model. 
+  Keeping punctuation and other irrelevant noise in the text would affect the performance of the classification model we wanted to use, so data cleaning was a valuable first step. We removed punctuation and symbols that had been used to replace redacted information. In our linguistic preprocessing stage, I defined function to tokenize, clean out stop-words and lemmatize each conversation. We then had clean text ready to be used in the classification model. 
 
 {::options parse_block_html="true" /}
 
@@ -58,8 +58,8 @@ Our pipeline included two main steps:
 {::options parse_block_html="false" /}
 
 ## Vectorization & Training
-Our classification model can only work with numbers, and there were a number of different options for converting the cleaned text into the appropriate numerical vectors. Since the text in our dataset had high similarity and requent repetition, TF-IDF vectorization was a good choice. TF-IDF would capture how often a word appears in a certain conversation, and then weight it by how unique that word was to the entire dataset of conversations. Words that appeared in many conversation topics would therefore be less dominant than words that were unique to the smaller subset of labels. 
-  I used the scikit-learn TF-IDF vectorizer and customized the parameters to fit well with our situation. I used sublinear term frequency scaling to tone down the effect of very frequent words (some words had 20+ appearances per conversation). A word could also be *too* unique. If a word only appears in one document it would get quite a large weight because it's correctly identified as a unique word. However, this word is likely not important to identifying the label since it only appeared once. I required that the term appear in at least 3 conversations for it to get added to the vocabulary. Finally, since words alone could miss valuable information, the model was also given bigrams. 
+Our classification model can only work with numbers, and there were several different options for converting the cleaned text into the appropriate numerical vectors. Since the text in our dataset had high similarity and frequent repetition, TF-IDF vectorization was a good choice. TF-IDF would capture how often a word appears in a certain conversation, and then weight it by how unique that word was to the entire dataset of conversations. Words that appeared in many conversation topics would therefore be less dominant than words that were unique to the smaller subset of labels. 
+  I used the scikit-learn TF-IDF vectorizer and customized the parameters to fit well with our situation. I used sublinear term frequency scaling to tone down the effect of very frequent words (some words had 20+ appearances per conversation). A word could also be *too* unique. If a word only appears in one document, it would get quite a large weight because it's correctly identified as a unique word. However, this word is likely not important to identifying the label since it only appeared once. I required that the term appear in at least 3 conversations for it to get added to the vocabulary. Finally, since words alone could miss valuable information, the model was also given bigrams. 
 
 {::options parse_block_html="true" /}
 
@@ -88,7 +88,7 @@ Our classification model can only work with numbers, and there were a number of 
 {::options parse_block_html="false" /}
 
 <br>
-The following wordclouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. In the first image, the size of the word is calculated from basic term frequency within the "employment or career inquiries" label. This represents normal count vectorization of text.
+The following word-clouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. In the first image, the size of the word is calculated from basic term frequency within the "employment or career inquiries" label. This represents normal count vectorization of text.
 
 ![Default Employment Wordcloud](/images/employment_def_wordcloud.png)
 
@@ -98,7 +98,7 @@ The image below was generated from the same conversations but the size of the wo
 
 
 ## Results
-We began by testing the performance between logistic regression, regressioin trees, and linear support vector machines. The performance in SVM was clearly the best so we decided to move forward with that model. Testing TF-IDF to SVM on the uncleaned text, the model was able to achieve an accuracy of around 55%. After implementing our pipeline and using optimal parameters, this accuracy improved to 62%. For comparison, the Best Buy team trained T5-small model for 20 epochs & achieved an F1 of 72%. While their model had superior performance, the difference in model complexity should be considered. One of the main goals of the project was to balance complexity and performance which is why we chose SVM rather than transformers or another neural network architecture.
+We began by testing the performance between logistic regression, regression trees, and linear support vector machines. The performance in SVM was clearly the best so we decided to move forward with that model. Testing TF-IDF to SVM on the uncleaned text, the model was able to achieve an accuracy of around 55%. After implementing our pipeline and using optimal parameters, this accuracy improved to 62%. For comparison, the Best Buy team trained T5-small model for 20 epochs & achieved an F1 of 72%. While their model had superior performance, the difference in model complexity should be considered. One of the main goals of the project was to balance complexity and performance which is why we chose SVM rather than transformers or another neural network architecture.
 
 ## Challenges
 One of the most challenging components of the project was deciding on how to deal with the class imbalance. When using TF-IDF and in classification in general, imbalanced classes tend to bias the results of the model. The following visualization shows the performance of each label in relation to that labels total size. 
@@ -108,7 +108,7 @@ One of the most challenging components of the project was deciding on how to dea
 The groups with the lowest number of observations did perform the worst overall. We attempted to oversample to minority group, undersample the majority group and even different mixes of both. Unfortunately, our changes improved certain groups while hurting others and the overall performance remained the same.
 
 ### An Interesting Finding about Performance
-The most interesting discovery came after I spent some time analyzing the vocabulary uniqueness of each label. Using Bayes' theorem I calculated the probability of membership to each label given each word. After running this code and getting each word-label combination I could look for the highest value words - words that produced high conditional probability. For example, the best word in the entire dataset was "hiring". If the conversation was about "employment or career inquiries" the word had a 50% chance of appearing. In the rest of the dataset less than 1% of the time. When the word "hiring" appears there was almost an 80% chance that the conversation could be labeled correctly as "employment or career inquiries". Keep in mind this was without having information from any other words. I grouped together each label with it's most valuable unique words. Below is a visualization of each label along with a score I calculated (based on Bayes) to reflect the uniqueness of the labels vocabulary.
+The most interesting discovery came after I spent some time analyzing the vocabulary uniqueness of each label. Using Bayes' theorem, I calculated the probability of membership to each label given each word. After running this code and getting each word-label combination I could look for the highest value words - words that produced high conditional probability. For example, the best word in the entire dataset was "hiring". If the conversation was about "employment or career inquiries" the word had a 50% chance of appearing. In the rest of the dataset less than 1% of the time. When the word "hiring" appears there was almost an 80% chance that the conversation could be labeled correctly as "employment or career inquiries". Keep in mind this was without having information from any other words. I grouped together each label with its most valuable unique words. Below is a visualization of each label along with a score I calculated (based on Bayes) to reflect the uniqueness of the label’s vocabulary.
 
 ![label_unique_score](/images/vocab_performance12.png)
 
