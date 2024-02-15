@@ -75,8 +75,8 @@ Projects
 **Text Classification of Customer Service Calls (Best Buy NLP Competition)**
   - Created a full NLP text cleaning & linguistic processing pipeline that fed into a TF-IDF SVM text classifier that could classify the topic of a customer service call and provide insight into customers key problems 
 
-**Popular Song Insight Extraction**
-  - Synthesized a new dataset by scraping song names from Billboard and matching with data from Spotify API. Then used clustering and visualizations to present the common features of the most popular songs 
+**Data Mining Popular Songs Using NLP and Audio Attributes**
+  - Synthesized a dataset with Python by scraping songs names from Billboard, audio attributes from Spotify, and lyric text from Genius. Clustered and visualized insights to communicate key features of popular music
 
 **Assessing Efficacy and Perceptions of COVID-19 Case and Contact Invetigations**
   - Wrote and implemented surveys to collect patient sentiment during interviews 
