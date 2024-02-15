@@ -78,7 +78,7 @@ Projects
 **Data Mining Popular Songs Using NLP and Audio Attributes**
   - Synthesized a dataset with Python by scraping songs names from Billboard, audio attributes from Spotify, and lyric text from Genius. Clustered and visualized insights to communicate key features of popular music
 
-**Assessing Efficacy and Perceptions of COVID-19 Case and Contact Invetigations**
+**Assessing Efficacy and Perceptions of COVID-19 Case and Contact Investigations**
   - Wrote and implemented surveys to collect patient sentiment during interviews 
   - Wrangled and analyzed data to generate insights and determine improvements in pandemic response strategies for Dallas County Health and Human Services
 
