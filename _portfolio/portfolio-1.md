@@ -7,6 +7,10 @@ collection: portfolio
 ## Table of Contents
 
 1. [Summary](#executive-summary)
+2. Data Overview
+3. Scraping Billboard Charts
+4. Spotify API
+   - [Alternative Method](#alternative-billboard-data-collection)
 
 
 ## Executive Summary
