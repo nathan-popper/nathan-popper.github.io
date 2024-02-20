@@ -4,4 +4,10 @@ excerpt: "By scraping the Billboard charts and mining a diverse range of feature
 collection: portfolio
 ---
 
-## Project in Progress
+## Executive Summary
+
+
+### Skills Utilized
+
+
+## Data Overview
