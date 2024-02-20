@@ -18,6 +18,7 @@ collection: portfolio
 ## Data Overview
 
 **Example Table**
+
 |    rank     |   track     |     artist  |  chart_year |
 | ----------- | ----------- | ----------- | ----------- |
 | Header      | Title       |    artist   |   year      |
