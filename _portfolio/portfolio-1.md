@@ -4,6 +4,11 @@ excerpt: "By scraping the Billboard charts and mining a diverse range of feature
 collection: portfolio
 ---
 
+## Table of Contents
+
+1. [Summary](#executive-summary)
+
+
 ## Executive Summary
 
 
