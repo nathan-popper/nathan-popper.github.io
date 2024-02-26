@@ -38,6 +38,6 @@ After some exploration, I decided that I would really like a more robust dataset
 ## Spotify Search for Song: Returns IDs
 Each song in Spotify has a unique IDs I need in order to access information about it. To get this ID, I need to search for it using song and artist name. First, I decided to write function that can simplify the artist names and song names. Removing terms like "Featuring" and punctuation makes searing and working with them in general much easier.
 
-[See 3D PCA](_portfolio/PCA_3D.html)
+[See 3D PCA](PCA_3D.html)
 
 
