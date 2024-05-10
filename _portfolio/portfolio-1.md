@@ -1,5 +1,5 @@
 ---
-title: "What Makes Modern Popular Music: Extracting Insights from 20 Years of Popular Songs"
+title: "What Makes Modern Popular Music: Extracting Insights from 25 Years of Popular Songs"
 excerpt: ""
 collection: portfolio
 ---
