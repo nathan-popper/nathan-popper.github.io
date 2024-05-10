@@ -24,7 +24,7 @@ Our pipeline included two main steps:
 1. Data cleaning
 2. Linguistic Preprocessing
 
-  Keeping punctuation and other irrelevant noise in the text would affect the performance of the classification model we wanted to use, so data cleaning was a valuable first step. We removed punctuation and symbols that had been used to replace redacted information. In our linguistic preprocessing stage, I defined function to tokenize, clean out stop-words and lemmatize each conversation. We then had clean text ready to be used in the classification model. 
+  Keeping punctuation and other irrelevant noise in the text would affect the performance of the classification model we wanted to use, so data cleaning was a valuable first step. We removed punctuation and symbols that had been used to replace redacted information. In our linguistic preprocessing stage, I defined function to tokenize, remove stop-words and lemmatize each conversation. We then had clean text ready to be used in the classification model. 
 
 {::options parse_block_html="true" /}
 
@@ -58,8 +58,8 @@ Our pipeline included two main steps:
 {::options parse_block_html="false" /}
 
 ## Vectorization & Training
-Our classification model can only work with numbers, and there were several different options for converting the cleaned text into the appropriate numerical vectors. Since the text in our dataset had high similarity and frequent repetition, TF-IDF vectorization was a good choice. TF-IDF would capture how often a word appears in a certain conversation, and then weight it by how unique that word was to the entire dataset of conversations. Words that appeared in many conversation topics would therefore be less dominant than words that were unique to the smaller subset of labels. 
-  I used the scikit-learn TF-IDF vectorizer and customized the parameters to fit well with our situation. I used sublinear term frequency scaling to tone down the effect of very frequent words (some words had 20+ appearances per conversation). A word could also be *too* unique. If a word only appears in one document, it would get quite a large weight because it's correctly identified as a unique word. However, this word is likely not important to identifying the label since it only appeared once. I required that the term appear in at least 3 conversations for it to get added to the vocabulary. Finally, since words alone could miss valuable information, the model was also given bigrams. 
+There were several different options for converting the cleaned text into the appropriate numerical vectors. Since the text in our dataset had high similarity and frequent repetitions, TF-IDF vectorization proved to be the best choice. TF-IDF would capture how often a word appears in a certain conversation, and then weight it by how unique that word was to the entire dataset of conversations. Words that appeared in many conversation topics would therefore be less dominant than words that were unique to a smaller subset of conversations. 
+  I used the scikit-learn TF-IDF vectorizer function and customized the parameters to fit our requirements. I used sublinear term frequency scaling to tone down the effect of very frequent words (some words had 20+ appearances per conversation). A word could also be *too* unique. If a word only appears in one document, it would get quite a large weight because it's correctly identified as a unique word. However, this word is likely not important to identifying the label since it only appeared once. I required that the term appear in at least 3 conversations for it to get added to the vocabulary. Finally, since single words alone could miss valuable information, the model was also given bigrams. 
 
 {::options parse_block_html="true" /}
 
@@ -88,11 +88,11 @@ Our classification model can only work with numbers, and there were several diff
 {::options parse_block_html="false" /}
 
 <br>
-The following word-clouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. In the first image, the size of the word is calculated from basic term frequency within the "employment or career inquiries" label. This represents normal count vectorization of text.
+The following word-clouds demonstrate the effectiveness of TF-IDF vectorization for text with frequently repeating words. In the first image, the size of the word is calculated from basic term frequency within the "employment or career inquiries" label. The largest and most dominant words are clearly not helpful for correctly identifying the label. This represents normal count vectorization of text. 
 
 ![Default Employment Wordcloud](/images/employment_def_wordcloud.png)
 
-The image below was generated from the same conversations but the size of the words now reflect how TF-IDF vectorization would weight them with inverse document frequency. The most unique and valuable words within the label become much more dominant. Using this type of vectorization allows the model to more easily discriminate between the classes. 
+The image below was generated from the same conversations but the size of the words now reflect how TF-IDF vectorization would weight them with inverse document frequency. The most unique and valuable words within the "employment or career inquiries" label become much more salient. Using this type of vectorization allows the model to more easily discriminate between the classes. 
 
 ![TFIDF Employment Wordcloud](/images/employment_tfidf_wordcloud.png)
 
