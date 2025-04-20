@@ -1,7 +1,7 @@
 ---
-title: "What Makes Modern Popular Music: Extracting Insights from 25 Years of Popular Songs"
+title: "None"
 excerpt: ""
 collection: portfolio
 ---
 
-**Project completed, write up coming soon.**
+
